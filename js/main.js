@@ -347,12 +347,6 @@ document.addEventListener("keyup", e => {
         ssSmoothScroll();
         ssBackToTop();
         ssModal1();
-<<<<<<< HEAD
-
-=======
-        
-       
->>>>>>> e3792f9c3a7403f9059b40f9e79109015d24f2f8
     })();
 
 })(document.documentElement);
