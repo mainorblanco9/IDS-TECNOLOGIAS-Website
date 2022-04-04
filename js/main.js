@@ -155,6 +155,7 @@
                 * an selector
                 */
                 if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                    
                     document.querySelector(".s-header__nav a[href*=" + sectionId + "]").parentNode.classList.add("current");
                 } else {
                     document.querySelector(".s-header__nav a[href*=" + sectionId + "]").parentNode.classList.remove("current");
@@ -346,8 +347,12 @@ document.addEventListener("keyup", e => {
         ssSmoothScroll();
         ssBackToTop();
         ssModal1();
+<<<<<<< HEAD
+
+=======
         
        
+>>>>>>> e3792f9c3a7403f9059b40f9e79109015d24f2f8
     })();
 
 })(document.documentElement);
