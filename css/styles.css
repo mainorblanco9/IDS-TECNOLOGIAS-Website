@@ -3168,7 +3168,7 @@ input[type="button"].btn--primary:focus {
  *
  * ------------------------------------------------------------------- */
 .s-header {
-    --header-height: 6.8rem;
+    --header-height: 6rem;
     z-index: 100;
     width: 100%;
     background-color: black ;
@@ -3183,7 +3183,7 @@ input[type="button"].btn--primary:focus {
     -ms-flex-pack: center;
     -webkit-box-pack: center;
     justify-content: center;
-    padding: 0 calc(var(--gutter-lg) + 1.2rem);
+    padding: 0 calc(var(--gutter-lg) + 1rem);
 }
 
 .s-header.offset {
@@ -3335,7 +3335,7 @@ input[type="button"].btn--primary:focus {
  * responsive:
  * header
  * ------------------------------------------------------------------- */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 925px) {
     .s-header {
         top: 0;
     }
@@ -3345,7 +3345,7 @@ input[type="button"].btn--primary:focus {
         padding: 0;
     }
     .s-header__nav-wrap, .s-header__nav {
-        background-color: #050505;
+        background-color: #3498DB;
     }
     .s-header__nav-wrap {
         -webkit-transform: scaleY(0);
