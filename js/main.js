@@ -155,6 +155,7 @@
                 * an selector
                 */
                 if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                    
                     document.querySelector(".s-header__nav a[href*=" + sectionId + "]").parentNode.classList.add("current");
                 } else {
                     document.querySelector(".s-header__nav a[href*=" + sectionId + "]").parentNode.classList.remove("current");
@@ -294,18 +295,6 @@
 
     }; // end ssBackToTop
 
-   
-const ssRefresh = function () {
-    $("#button").click(function() {
-        $('html, body').animate({
-        scrollTop: $("#elementtoScrollToID").offset().top
-        }, 2000);
-   
-    
-})
-};
-
-
 const ssModal1 = function() {
 
     const openEls = document.querySelectorAll("[data-open]");
@@ -358,9 +347,7 @@ document.addEventListener("keyup", e => {
         ssSmoothScroll();
         ssBackToTop();
         ssModal1();
-        ssRefresh();
-        
-       
+
     })();
 
 })(document.documentElement);
