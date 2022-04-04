@@ -294,18 +294,6 @@
 
     }; // end ssBackToTop
 
-   
-const ssRefresh = function () {
-    $("#button").click(function() {
-        $('html, body').animate({
-        scrollTop: $("#elementtoScrollToID").offset().top
-        }, 2000);
-   
-    
-})
-};
-
-
 const ssModal1 = function() {
 
     const openEls = document.querySelectorAll("[data-open]");
@@ -358,7 +346,6 @@ document.addEventListener("keyup", e => {
         ssSmoothScroll();
         ssBackToTop();
         ssModal1();
-        ssRefresh();
         
        
     })();
