@@ -90,8 +90,21 @@
 
    /* Mobile Menu
     * ---------------------------------------------------- */ 
-    const ssMobileMenu = function() {
 
+   //Si el submenu en mobile se activa
+  /* ------------------------------------------------*/
+   let seDesplegoDropdown = false; let seDesplegoDropdown2 = false;
+   const IDS_Industria= document.querySelector(".IDS-Industria");
+                    IDS_Industria.addEventListener("click", function( event ) {
+                        seDesplegoDropdown=true;
+                      });
+    const IDS_Ambiente= document.querySelector(".IDS-Ambiente");
+                    IDS_Ambiente.addEventListener("click", function( event ) {
+                        seDesplegoDropdown2=true;
+                    });
+   /* ------------------------------------------------*/                  
+    const ssMobileMenu = function() {
+       
         const toggleButton = document.querySelector('.s-header__menu-toggle');
         const headerNavWrap = document.querySelector('.s-header__nav-wrap');
         const siteBody = document.querySelector("body");
@@ -103,14 +116,23 @@
             toggleButton.classList.toggle('is-clicked');
             siteBody.classList.toggle('menu-is-open');
         });
-
+       
         headerNavWrap.querySelectorAll('.s-header__nav a').forEach(function(link) {
             link.addEventListener("click", function(evt) {
 
                 // at 800px and below
                 if (window.matchMedia('(max-width: 800px)').matches) {
                     toggleButton.classList.toggle('is-clicked');
-                    siteBody.classList.toggle('menu-is-open');
+                   // debugger;
+                    if(!seDesplegoDropdown && !seDesplegoDropdown2) {//Para que se cierre el submenu
+                        siteBody.classList.toggle('menu-is-open'); 
+                        seDesplegoDropdown=false;
+                    }else if(!seDesplegoDropdown2 && !seDesplegoDropdown){
+                        siteBody.classList.toggle('menu-is-open'); 
+                        seDesplegoDropdown2=false;
+                    } 
+                    else  {seDesplegoDropdown=false; seDesplegoDropdown2=false;}
+               
                 }
             });
         });
