@@ -5224,13 +5224,3 @@ right: 10px;
 .Texto2, .triste{
       display: none;
   }
-</style>
-  .mensajevisible{
-    color:#aaf;
-    background-color:#ff0;
-    display:block;
-    font-size:30px;
-    width:400px;
-    border:1px solid #00f;
-    padding:5px;
-  }
