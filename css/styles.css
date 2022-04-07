@@ -1669,7 +1669,10 @@ h1, .h1 {
     line-height: calc(var(--vspace-1_75) + var(--vspace-0_125));
     letter-spacing: -.015em;
 }
+h4.h3.servicios{
 
+    margin-bottom:-1.5em;
+}
 @media screen and (max-width: 600px) {
     h1, .h1 {
         font-size: var(--text-xxxl);
@@ -3925,13 +3928,17 @@ input[type="button"].btn--primary:focus {
     margin-bottom: var(--vspace-0_25);
     text-align: justify;
 }
+.resume-block__header.servicios{
 
+    margin-top: -1em;
+    margin-bottom: -3em;
+}
 .resume-block__header-meta {
     font-family: var(--font-2);
     font-size: calc(var(--text-size) * 1.1111);
     font-style: italic;
     margin-top: -.4rem;
-    margin-bottom: var(--vspace-0_75)-2em;
+    margin-bottom:var(--vspace-0_75);
 }
 
 .resume-block__header-meta span:first-child {

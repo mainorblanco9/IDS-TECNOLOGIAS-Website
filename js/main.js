@@ -123,7 +123,7 @@
                 // at 800px and below
                 if (window.matchMedia('(max-width: 800px)').matches) {
                     toggleButton.classList.toggle('is-clicked');
-                   // debugger;
+                  
                     if(!seDesplegoDropdown && !seDesplegoDropdown2) {//Para que se cierre el submenu
                         siteBody.classList.toggle('menu-is-open'); 
                         seDesplegoDropdown=false;
