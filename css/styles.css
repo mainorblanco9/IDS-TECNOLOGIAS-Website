@@ -1681,7 +1681,7 @@ h4.h3.servicios{
     margin-bottom:-1.5em;
 }
 @media screen and (max-width: 600px) {
-    h1, .h1 {
+    h1, .h1 .h2 h2 {
         font-size: var(--text-xxxl);
         line-height: var(--vspace-1_75);
     }
