@@ -324,10 +324,7 @@ main {
 /* Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari. */
 
-h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
-}
+
 
 /* ------------------------------------------------------------------- 
  * ## grouping
@@ -1636,14 +1633,24 @@ a:hover, a:active {
 h1, h2, h3, h4, h5, h6, 
 .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: var(--font-1);
-    font-weight: 600;
+    font-weight: 200;
     font-style: normal;
-    color: var(--color-text-white);
+    color: black;
     -webkit-font-variant-ligatures: common-ligatures;
     font-variant-ligatures: common-ligatures;
     text-rendering: optimizeLegibility;
     text-align: center;
 
+}
+.h1Cool {
+    font-family: var(--font-1);
+    font-weight: 200;
+    font-style: normal;
+    color: #3498DB;
+    -webkit-font-variant-ligatures: common-ligatures;
+    font-variant-ligatures: common-ligatures;
+    text-rendering: optimizeLegibility;
+    text-align: center;
 }
 
 h1, .h1 {
