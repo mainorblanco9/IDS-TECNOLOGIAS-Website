@@ -3261,7 +3261,10 @@ input[type="button"].btn--primary:focus {
 }
 
 .s-header__nav .current a {
-    color: var(--color-2);
+    color: #30A8F8;
+}
+.s-header__nav .current2 a {
+    color: #0BAF4D;
 }
 
 /* ------------------------------------------------------------------- 
@@ -3451,7 +3454,7 @@ input[type="button"].btn--primary:focus {
  *
  * ------------------------------------------------------------------- */
 .s-inicio {
-    background-color: black;
+    background-color: white;
     width: 100%;
     height: 80vh;
     min-height: calc(25.5 * var(--space));
