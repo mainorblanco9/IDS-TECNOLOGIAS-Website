@@ -309,10 +309,11 @@ html {
  * ------------------------------------------------------------------- */
 
 /* Remove the margin in all browsers. */
-
+/*{hyphens: auto;}*/
 body {
     margin: 0;
   font: 16px/1.5 sans-serif;
+  
 }
 
 /* Render the `main` element consistently in IE. */
@@ -1679,6 +1680,10 @@ h1, .h1 {
 h4.h3.servicios{
 
     margin-bottom:-1.5em;
+}
+h3.align-items-center{
+    font-weight: 500;
+    text-align: center;
 }
 @media screen and (max-width: 600px) {
     h1, .h1 .h2 h2 {
@@ -4267,6 +4272,7 @@ input[type="button"].btn--primary:focus {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background-color: cadetblue;
 }
 
 .s-testimonials__bg::before {
@@ -4370,7 +4376,7 @@ input[type="button"].btn--primary:focus {
 }
 
 .testimonial-slider__cite strong {
-    font-size: calc(var(--text-size) * 0.944);
+    /*font-size: calc(var(--text-size) * 0.944);*/
     line-height: var(--vspace-0_5);
     color: white;
 }

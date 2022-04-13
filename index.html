@@ -20,6 +20,7 @@
 
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/vendor.css">
+    <link href="css/popup.css" rel="stylesheet" type="text/css" />   
 
     <!-- script
     ================================================== -->
@@ -1278,11 +1279,22 @@
 
     </section> <!-- end s-ids-ambiente -->
 
-
-    <!-- CTA
+<!-- CTA
     ================================================== -->
     <section id="Servicios-ambiente" class="s-testimonials target-section">
-
+ <!--windows pop-up -->
+ <div id="popup" class="overlay">
+    <div id="popupBody">
+        <h2></h2>
+        <a id="cerrar" href="#Servicios-ambiente">&times;</a>
+        <div class="popupContent">
+            <h3></h3>
+            <img src="">
+            <p></p>
+        </div>
+    </div>
+</div>
+<!-- end windows pop-up -->
         <div class="s-testimonials__bg"></div>
 
         <div class="row s-testimonials__header">
@@ -1290,7 +1302,7 @@
                 <h3 class="align-items-center">Servicios</h3>
             </div>
         </div>
-
+       
         <div class="row s-testimonials__content">
 
             <div class="column">
@@ -1317,6 +1329,10 @@
                                 	-Comunicación y divulgación <br>
                                 
                             </p>
+                           <p><a id="card_GestionResiduoSolidos" class="text-primary text-bold" onclick="ssShowPopup()" href="#popup">Ver más
+                            <i class="fa fa-arrow-right"></i>
+                           </a></p>
+                           
                         </div> <!-- end testimonial-slider__slide -->
         
                         <div class="testimonial-slider__slide swiper-slide">
@@ -1334,6 +1350,11 @@
                                 para conocer las propiedades fisico-químicas
                                  de las sustancias que se estan manipulando, con el fin de evitar accidentes y daños ambientales.
                             </p>
+                            <p><a class="text-primary text-bold" href="#popup">Ver más
+                                <i class="fa fa-arrow-right"></i>
+                               </a>
+                                
+                               </p>
                         </div> <!-- end testimonial-slider__slide -->
         
                         <div class="testimonial-slider__slide swiper-slide">
@@ -1354,6 +1375,11 @@
 
 
                             </p>
+                            <p><a class="text-primary text-bold" href="#popup">Ver más
+                                <i class="fa fa-arrow-right"></i>
+                               </a>
+                                
+                               </p>
                         </div> <!-- end testimonial-slider__slide -->
 
                         <div class="testimonial-slider__slide swiper-slide">
@@ -1373,6 +1399,11 @@
                                  continua en los procesos;
                                  así como la optimización de recursos disponibles con soluciones sostenibles.
                             </p>
+                            <p><a class="text-primary text-bold" href="#popup">Ver más
+                                <i class="fa fa-arrow-right"></i>
+                               </a>
+                                
+                               </p>
                         </div> <!-- end testimonial-slider__slide -->
                         <div class="testimonial-slider__slide swiper-slide">
                             <div class="testimonial-slider__author">
@@ -1400,6 +1431,11 @@
 
                                 
                             </p>
+                            <p><a class="text-primary text-bold" href="#popup">Ver más
+                                <i class="fa fa-arrow-right"></i>
+                               </a>
+                                
+                               </p>
                         </div> <!-- end testimonial-slider__slide -->
     
                         <div class="testimonial-slider__slide swiper-slide">
@@ -1413,9 +1449,9 @@
                             <p>
                                 Como ente regulador, apoyamos a nuestros clientes desde lo que establece 
                                 la administración publica en la ejecución de tramites para diferentes proyectos,
-                                 simplificando y agilizando el proceso , 
+                                simplificando y agilizando el proceso , 
                                 mejorando la eficacia reduciendo gastos operativos,
-                                 gestionando los siguientes permisos o certificados:
+                                gestionando los siguientes permisos o certificados:
                                 <br>    
                                 •	Reportes operacionales <br>
                                 •	Permisos de descarga de aguas pluviales y residuales <br>
@@ -1426,6 +1462,11 @@
                             
                                 
                             </p>
+                            <p><a class="text-primary text-bold" href="#popup">Ver más
+                                <i class="fa fa-arrow-right"></i>
+                               </a>
+                                
+                               </p>
                         </div> <!-- end testimonial-slider__slide -->
     
                         <div class="testimonial-slider__slide swiper-slide">
@@ -1438,11 +1479,11 @@
                             </div>
                             <p>
                                 Como encargada en CR de regular las actividades que
-                                 causen algún impacto en el medio ambiente , con carácter
-                                  de obligatoriedad que los proyectos esten alineados en el 
-                                  marco de desarrollo sostenible. IDS & Tecnologías S.A brinda 
-                                  este servicio garantizando que su proyecto cumpla con los requisitos
-                                   solicitados de acuerdo a cada actividad y nombrados a continuación:
+                                causen algún impacto en el medio ambiente , con carácter
+                                de obligatoriedad que los proyectos esten alineados en el 
+                                marco de desarrollo sostenible. IDS & Tecnologías S.A brinda 
+                                este servicio garantizando que su proyecto cumpla con los requisitos
+                                solicitados de acuerdo a cada actividad y nombrados a continuación:
 
                                 •	Viabilidades Ambientales <br>
                                 •	Formulario D1 <br>
@@ -1456,6 +1497,11 @@
                                 •	Recursos de revocatoria <br>
                                 •	Seguimiento de denuncias <br>
                             </p>
+                            <p><a class="text-primary text-bold" href="#popup">Ver más
+                                <i class="fa fa-arrow-right"></i>
+                               </a>
+                                
+                               </p>
                         </div> <!-- end testimonial-slider__slide -->
     
                         <div class="testimonial-slider__slide swiper-slide">
@@ -1467,8 +1513,8 @@
                                 </cite>
                             </div>
                             <p>
-                                Le brindamos servicios orientados a gestionar y proteger el recurso hídrico. Lo cual es una tramitología desde Ministerio de Ambiente y Energía (MINAE),
-                                 a través de  La Direccion de Aguas con los siguientes tramites:
+                                Le brindamos servicios orientados a gestionar y proteger el recurso hídrico. Lo cual es una tramitología desde
+                                Ministerio de Ambiente y Energía (MINAE), a través de  La Direccion de Aguas con los siguientes tramites:
 
                                 •	Permisos de descarga de aguas de drenajes agrícolas <br>
                                 •	Permisos de obras en cause <br>
@@ -1478,6 +1524,11 @@
                                 •	Permisos de vertidos <br>
                               
                             </p>
+                            <p><a class="text-primary text-bold" href="#popup">Ver más
+                                <i class="fa fa-arrow-right"></i>
+                               </a>
+                                
+                               </p>
                         </div> <!-- end testimonial-slider__slide -->
     
                         <div class="testimonial-slider__slide swiper-slide">
@@ -1504,12 +1555,18 @@
                                <br> -	Hexafluoruro de azufre(SF6)
                                 
                                <br>
-        Se requiere de la estimación precisa de la huella de carbono del producto, (proceso y actividad), así como de la realización de acciones internas o externas para disminuir esta huella haciendo cumplir la siguiente ecuación.
+                    Se requiere de la estimación precisa de la huella de carbono del producto, (proceso y actividad), así como de la realización 
+                    de acciones internas o externas para disminuir esta huella haciendo cumplir la siguiente ecuación.
 
                           
                        </span> 
 
                             </p>
+                            <p><a class="text-primary text-bold" href="#popup">Ver más
+                                <i class="fa fa-arrow-right"></i>
+                               </a>
+                                
+                               </p>
                         </div> <!-- end testimonial-slider__slide -->
     
                         <div class="testimonial-slider__slide swiper-slide">
@@ -1523,13 +1580,18 @@
                             <p>
                                                         
                                 El galardón o distintivo de Bandera Azul Ecológica es uno de los objetivos
-                                 que su empresa podrá conseguir con la asesoría de IDS & Tecnologias S.A ,
-                                  lo cual seria un premio al esfuerzo y el trabajo voluntario en la búsqueda de la 
-                                  sostenibilidad, siempre enfocados en la protección de los recursos naturales, 
+                                que su empresa podrá conseguir con la asesoría de IDS & Tecnologias S.A ,
+                                lo cual seria un premio al esfuerzo y el trabajo voluntario en la búsqueda de la 
+                                sostenibilidad, siempre enfocados en la protección de los recursos naturales, 
                                 propiciando un ambiente sano y ecológicamente equilibrado.
 
 
                             </p>
+                            <p><a class="text-primary text-bold" href="#popup">Ver más
+                                <i class="fa fa-arrow-right"></i>
+                               </a>
+                                
+                               </p>
                         </div> <!-- end testimonial-slider__slide -->
     
     
@@ -1543,17 +1605,21 @@
                             </div>
                             <p>
                                 
-
                                 Consiste en un insentivo monetario a los usuarios de suelos,
-                                 de manera que al darle un buen uso a los mismos adoptando prácticas responsables 
-                                 (captación de carbono en siembra de árboles), puedan ofrecer un servicio ambiental ,
-                                 ya que ecológicamente benefician a la sociedad en general. Se puede llevar a cobo bajo
-                                  cinco rasgos distintivos, para IDS & Tecnologias S.A. será un gusto brindar acompañamiento
-                                 y asesoría para optar por este gran istrumento eonomico. 
+                                de manera que al darle un buen uso a los mismos adoptando prácticas responsables 
+                                (captación de carbono en siembra de árboles), puedan ofrecer un servicio ambiental ,
+                                ya que ecológicamente benefician a la sociedad en general. Se puede llevar a cobo bajo
+                                cinco rasgos distintivos, para IDS & Tecnologias S.A. será un gusto brindar acompañamiento
+                                y asesoría para optar por este gran istrumento eonomico. 
                                
 
 
                             </p>
+                            <p><a class="text-primary text-bold" href="#popup">Ver más
+                                <i class="fa fa-arrow-right"></i>
+                               </a>
+                                
+                               </p>
                         </div> <!-- end testimonial-slider__slide -->
 
                         <div class="testimonial-slider__slide swiper-slide">
@@ -1566,23 +1632,23 @@
                             </div>
                             <p>
                                 La gestión medioambiental en las operaciones de cualquier empresa, será una herramienta
-                                 para lograr un éxito sustentable.  Con la implementación de esta norma que es una estandarización
-                                  internacional en sus procesos, les ayudará a reducir los impactos negativos al ambiente 
-                                  ,asi como permitir el crecimiento de su organización
-                                 y mantenerse exitosa en el tiempo, logrando los siguientes beneficios:
+                                para lograr un éxito sustentable.  Con la implementación de esta norma que es una estandarización
+                                internacional en sus procesos, les ayudará a reducir los impactos negativos al ambiente 
+                                ,asi como permitir el crecimiento de su organización
+                                y mantenerse exitosa en el tiempo, logrando los siguientes beneficios:
                                  
                                 •	Reducir el desperdicio y el uso de la energía <BR>
                                 •	Disminuir costos de operación en su organización <br>
                                 •	Oportunidades de negocio con una visión de responsabilidad ambiental <br>
                                 •	Confiabilidad de los clientes por el compromiso con la legislación vigente <br>
                      
-                                
-
-                            
-                               
-
 
                             </p>
+                            <p><a class="text-primary text-bold" href="#popup">Ver más
+                                <i class="fa fa-arrow-right"></i>
+                               </a>
+                                
+                               </p>
                         </div> <!-- end testimonial-slider__slide -->
     
                         <div class="testimonial-slider__slide swiper-slide">
@@ -1596,8 +1662,8 @@
                             <p>
                                 El consumo anual de las diferentes empresas, en la gran moyoria de los casos son posibles 
                                 de reducir, en este sentido IDS & Tecnologias S. A ,le puede asesorar para conseguir un
-                                 certificado mediante la medición energética en las condiciones normales de funcionamiento de 
-                                 su edificio ,desde diferentes variables como: Calentadores de agua,calefacción, 
+                                certificado mediante la medición energética en las condiciones normales de funcionamiento de 
+                                su edificio ,desde diferentes variables como: Calentadores de agua,calefacción, 
                                 aires acondicionados,iluminación, refrigeración, entre otros.                           
 
                             
@@ -1605,6 +1671,11 @@
 
 
                             </p>
+                            <p><a class="text-primary text-bold" href="#popup">Ver más
+                                <i class="fa fa-arrow-right"></i>
+                               </a>
+                                
+                               </p>
                         </div> <!-- end testimonial-slider__slide -->
     
                         <div class="testimonial-slider__slide swiper-slide">
@@ -1617,8 +1688,8 @@
                             </div>
                             <p>
                                 Como estrategia o método de optimización en el uso de la energía,insumos,y
-                                 procesos industriales, la empresa IDS & Tecnologias S. A, les ofrece la orientación, 
-                                 para que en su organización pueda contar con el certificado de ecoeficiencia, 
+                                procesos industriales, la empresa IDS & Tecnologias S. A, les ofrece la orientación, 
+                                para que en su organización pueda contar con el certificado de ecoeficiencia, 
                                 logrando alcanzar los siguientes beneficios: <br>
 
 
@@ -1632,6 +1703,11 @@
 
 
                             </p>
+                            <p><a class="text-primary text-bold" href="#popup">Ver más
+                                <i class="fa fa-arrow-right"></i>
+                               </a>
+                                
+                               </p>
                         </div> <!-- end testimonial-slider__slide -->
     
     
@@ -1640,7 +1716,7 @@
                                 <img src="images/carbononeutral.jpg" alt="Author image" class="testimonial-slider__avatar">
                                 <cite class="testimonial-slider__cite">
                                     <strong>Ventas de Productos ambientales</strong>
-                                    <span>	Tratamiento de agua potable y residuales (comercial,industrial y residencial)</span>
+                                    <span>Tratamiento de agua potable y residuales (comercial,industrial y residencial)</span>
                                 </cite>
                             </div>
                             <p>
@@ -1648,12 +1724,17 @@
                                 obtener los mejores resultados posibles, tanto medioambientales como económicos, para nuestros 
                                 clientes. Ofrecemos soluciones llaves en mano en la instalación de plantas para la purificación 
                                 de aguas de proceso, es decir, aguas que necesitan ser tratadas antes de ser incorporadas a procesos 
-                                productivos.  Contamos con las mejores tecnologías disponibles para la adecuación de las aguas residuales
-                                 generadas en los procesos industriales a los límites de vertido establecidos por leyes actuales.
+                                productivos. Contamos con las mejores tecnologías disponibles para la adecuación de las aguas residuales
+                                generadas en los procesos industriales a los límites de vertido establecidos por leyes actuales.
                                                      
                                 
                           
-                                                                        </p>
+                             </p>
+                             <p><a class="text-primary text-bold" href="#popup">Ver más
+                                <i class="fa fa-arrow-right"></i>
+                               </a>
+                                
+                               </p>
                         </div> <!-- end testimonial-slider__slide -->
       
                         <div class="testimonial-slider__slide swiper-slide">
@@ -1672,7 +1753,12 @@
                                 
       
                           
-                                                                        </p>
+                            </p>
+                            <p><a class="text-primary text-bold" href="#popup">Ver más
+                                <i class="fa fa-arrow-right"></i>
+                               </a>
+                                
+                               </p>
                         </div> <!-- end testimonial-slider__slide -->
 
                                 

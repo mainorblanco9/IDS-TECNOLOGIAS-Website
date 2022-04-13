@@ -28,12 +28,12 @@
             });
 
         });
-
+       
         // force page scroll position to top at page refresh
-        // window.addEventListener('beforeunload' , function () {
-        //     window.scrollTo(0, 0);
-        // });
-
+       /* window.addEventListener('beforeunload' , function () {
+            window.scrollTo(0, 0);
+        });
+*/
     }; // end ssPreloader
 
 
@@ -198,7 +198,10 @@
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
-            },          
+            }, 
+            autoplay: {
+                delay: 5000,
+            },        
             breakpoints: {
                 // when window width is >= 401px
                 401: {
@@ -349,10 +352,7 @@ document.addEventListener("keyup", e => {
   }
 });
     
-
-
 }; 
-    
 
    /* initialize
     * ------------------------------------------------------ */
@@ -368,9 +368,58 @@ document.addEventListener("keyup", e => {
         ssAlertBoxes();
         ssSmoothScroll();
         ssBackToTop();
-        ssModal1();
+        //ssShowPopup();
+        //ssModal1();
     })();
 
 })(document.documentElement);
 
+
+/* Para agregar la info a los popup */
+function ssShowPopup(){
+    $('#Servicios-ambiente').click(function(e){
+        let id = e.target.id;
+
+         if(id==="card_GestionResiduoSolidos"){/*Si se selecciona Gestion de Residuos solidos */
+     
+         const titulo = document.querySelector("#popupBody h2").textContent="Gestion de Residuos solidos";
+         const titulo2 = document.querySelector(".popupContent h3").textContent="Programas institucionales en el" 
+         +" manejo de Residuos Sólidos";
+         const imagen1 = document.querySelector(".popupContent img").src="images/RESIDUOSESPECIALES.jpg";
+         const texto = document.querySelector(".popupContent p").textContent="Enfocado en el reconocimiento en la" 
+         +"variedad de residuos solidos existentes en cada establecimiento o por áreas funcionales,articulando una" 
+         +"serie de líneas que minimicen los impactos ambientales e mpulsando una variedad de instrumentos bajo la" 
+         +"legislación vigente, se destacan:";
+
+         const ulExiste = !!document.querySelector(".popupContent ul");
+
+         if(!ulExiste){
+             
+        let ul = document.createElement("ul");
+ 
+        let li1 = document.createElement("li");
+        let li1Texto = document.createTextNode("Implementación del Plan de Manejo (Gestión circular con reuso de materiales)");
+        li1.appendChild(li1Texto);
+     
+        let li2 = document.createElement("li");
+        let li2Texto = document.createTextNode("Gestión Administrativa");
+        li2.appendChild(li2Texto);
+        
+        let li3 = document.createElement("li");
+        let li3Texto = document.createTextNode("Educación y sensibilización");
+        li3.appendChild(li3Texto);
+        
+        let li4 = document.createElement("li");
+        let li4Texto = document.createTextNode("Comunicación y divulgación");
+        li4.appendChild(li4Texto);
+
+        ul.appendChild(li1);
+        ul.appendChild(li2);
+        ul.appendChild(li3);
+        ul.appendChild(li4);
+
+        const padrePopupContent = document.getElementsByClassName("popupContent")[0].appendChild(ul);
+         }
+         }
+        });}
 
