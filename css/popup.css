@@ -10,7 +10,6 @@
     visibility: hidden;
     opacity: 0;
     z-index: 100;
-   
 }
 .overlay:target {
     visibility: visible;
