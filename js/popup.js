@@ -1,12 +1,16 @@
-/* ============ Oculta y muestra el popup con la tecla Esc  =================*/
-var elem = $( '#popup' )[0];	
+/* ============ Oculta con la tecla Esc la ventana popup =================*/	
+function moverseA(idDelElemento) {
+    location.hash = "#" + idDelElemento;
+}
 $(document).on('keydown', function ( e ){
         if(e.keyCode === 27 ) {
-       $(elem).closest('#popup');
+       $('#popup').hide();
         }
-        });
+        moverseA("Servicios-ambiente");
+        }
+        );
 
-/* ============ fin de funciones  =================*/
+/* ============ fin de ocultar ventana popup  =================*/
 const cleanDiv = () => {
 
     const padre=document.querySelector("#popupBody");
@@ -15,7 +19,10 @@ const cleanDiv = () => {
 }
 /* Para agregar la info a los popup */
 function ssShowPopup(){
-        
+    
+    /* Mostrar de nueva popup */
+    $('#popup').show();
+    /* ======================*/
     $('#Servicios-ambiente').one("click",function(e){
         
         if(!!document.querySelector("#popupBody h2")) cleanDiv(); //si ya se creo contenido antes lo borramos
@@ -151,6 +158,21 @@ function ssShowPopup(){
          const creatImage2 = document.createElement("img");
          creatImage2.src="images/clean2.jpg";
          document.getElementsByClassName("popupContent")[0].appendChild(creatImage2);
+
+        }else if(id==="card_EducacionAmbiental"){/*Educacion Ambiental / Tramitologia Ambiental*/
+
+         const creatTitle = document.createElement("h2");
+         creatTitle.textContent="Educacion Ambiental";
+         const theFirstChild =document.getElementById("popupBody").firstChild;
+         document.getElementById("popupBody").insertBefore(creatTitle,theFirstChild);
+
+         const creatTitle2 = document.createElement("h3");
+         creatTitle2.textContent="Tramitologia Ambiental";
+         document.getElementsByClassName("popupContent")[0].appendChild(creatTitle2);
+
+         const creatImage = document.createElement("img");
+         creatImage.src="images/tramitologiaAmbiental.jpg";
+         document.getElementsByClassName("popupContent")[0].appendChild(creatImage);
 
         }
            
