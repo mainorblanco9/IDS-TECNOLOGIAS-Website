@@ -27,6 +27,30 @@
     margin: 20% auto;    
     overflow-y: scroll;
 }
+.popupContent img {
+    width: 25%;
+    height: auto;
+    margin:0 1em;
+}
+.popupContent{
+    
+    padding:0 1em;
+    
+}
+.popupContent ul {
+
+    list-style: none; /* Quitamos los marcadores */
+    padding: 0; /* Quitamos el padding por defecto de la lista */
+    margin-left: 10px; /* Separamos la lista de la izquierda */
+}
+    
+.popupContent li::before { /* Añadimos contenido antes de cada elemento de la lista */
+    content: "\2022"; /* Insertamos el marcador */
+    padding-right: 8px; /* Establecemos el espacio entre las viñetas y el list item */
+    color: red; /* Coloreamos la viñeta */
+    
+}
+
 #cerrar{
     position: absolute;
     top: 20px;
