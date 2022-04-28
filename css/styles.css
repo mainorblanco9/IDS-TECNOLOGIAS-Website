@@ -635,7 +635,7 @@ svg, img, video embed, iframe, object {
 div, dl, dt, dd, ul, ol, li, h1,h5, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
     margin: 0;
     padding: 0;
-    text-align: justify;
+    /*text-align: justify;*/
  
 }
 
@@ -1663,13 +1663,13 @@ h1, .h1 {
  h3, .h3, h4, .h4 {
     margin-top: var(--vspace-2_5);
     margin-bottom: var(--vspace-0_5);
-    text-align: justify;
+    /*text-align: justify;*/
 }
 
 h5, .h5, h6, .h6 {
     margin-top: var(--vspace-1_5);
     margin-bottom: var(--vspace-0_5);
-    text-align: justify;
+    /*text-align: justify;*/
 }
 
 h1, .h1 {
@@ -1706,7 +1706,7 @@ h3, .h3 {
 h4, .h4 {
     font-size: var(--text-lg);
     line-height: var(--vspace-1);
-    text-align: justify;
+    /*text-align: justify;*/
 }
 
 h5, .h5 {
@@ -3941,7 +3941,7 @@ input[type="button"].btn--primary:focus {
     line-height: 1.080;
     margin-top: 0;
     margin-bottom: var(--vspace-0_25);
-    text-align: justify;
+    /*text-align: justify;*/
 }
 .resume-block__header.servicios{
 

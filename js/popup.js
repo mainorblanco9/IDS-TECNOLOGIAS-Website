@@ -1,3 +1,4 @@
+
 /* ============ Oculta con la tecla Esc la ventana popup =================*/
 function moverseA(idDelElemento) {
     location.hash = "#" + idDelElemento;
@@ -7,10 +8,21 @@ $(document).on('keydown', function (e) {
         $('#popup').hide();
     }
     moverseA("Servicios-ambiente");
-}
-);
+});
+window.onload = function () {//Quita el popup al recargar la pagina y tambien el
+    //la regresa al principio del sitio
+    $('#popup').hide();
+    location.hash = "#top";
+  }
 
 /* ============ fin de ocultar ventana popup  =================*/
+
+/* ============ Oculta la ventana popup desde el boton x  =================*/
+let cerrarPopup = popup => {
+    document.getElementById(popup).style.display = "none";
+  }
+
+/* ============ Oculta la ventana popup desde el boton x  =================*/
 const cleanDiv = () => {
 
     const padre = document.querySelector("#popupBody");
@@ -19,7 +31,7 @@ const cleanDiv = () => {
 }
 /* Para agregar la info a los popup */
 function ssShowPopup() {
-
+   
     /* Mostrar de nueva popup */
     $('#popup').show();
     /* ======================*/
@@ -42,18 +54,28 @@ function ssShowPopup() {
 
             const creatImage = document.createElement("img");
             creatImage.src = "images/RESIDUOSESPECIALES.jpg";
+            creatImage.alt="Residuos solidos";
+            creatImage.id="img-left";
+            creatImage.style.width = "200px";
+            creatImage.style.height = "auto";
             document.getElementsByClassName("popupContent")[0].appendChild(creatImage);
 
-            const creatImage2 = document.createElement("img");
-            creatImage2.src = "images/Biohazard-cleanup.jpg";
-            document.getElementsByClassName("popupContent")[0].appendChild(creatImage2);
 
             const texto = document.createElement("p");
             texto.textContent = "Enfocado en el reconocimiento en la"
-                + "variedad de residuos solidos existentes en cada establecimiento o por áreas funcionales,articulando una"
-                + "serie de líneas que minimicen los impactos ambientales e mpulsando una variedad de instrumentos bajo la"
-                + "legislación vigente, se destacan:";
+                + " variedad de residuos solidos existentes en cada establecimiento o por áreas funcionales, articulando una"
+                + " serie de líneas que minimicen los impactos ambientales e impulsando una variedad de instrumentos bajo la"
+                + " legislación vigente, se destacan:";
             document.getElementsByClassName("popupContent")[0].appendChild(texto)
+
+            const creatImage2 = document.createElement("img");
+            creatImage2.src = "images/Biohazard-cleanup.jpg";
+            creatImage2.id="img-right";
+            creatImage2.className="ajustarCentro";
+            creatImage2.style.width = "200px";
+            creatImage2.style.height = "auto";
+            document.getElementsByClassName("popupContent")[0].appendChild(creatImage2);
+
 
             let ul = document.createElement("ul");
 
@@ -80,6 +102,7 @@ function ssShowPopup() {
 
             document.getElementsByClassName("popupContent")[0].appendChild(ul);
 
+            
         } else if (id === "card_GestionResiduoSolidos2") {/*Si se selecciona Gestion de Residuos solidos 
          Asesoría en la gestión de residuos peligrosos y especiales*/
 
@@ -91,10 +114,6 @@ function ssShowPopup() {
             const creatTitle2 = document.createElement("h3");
             creatTitle2.textContent = "Asesoría en la gestión de residuos peligrosos y especiales";
             document.getElementsByClassName("popupContent")[0].appendChild(creatTitle2);
-
-            const creatImage = document.createElement("img");
-            creatImage.src = "images/Biohazard-cleanup.jpg";
-            document.getElementsByClassName("popupContent")[0].appendChild(creatImage);
 
             const texto = document.createElement("p");
             texto.textContent = "Se propondrá un programa mediante capacitaciónes especializadas con procedimientos"
@@ -114,14 +133,16 @@ function ssShowPopup() {
             const creatTitle2 = document.createElement("h3");
             creatTitle2.textContent = "Análisis de volúmenes de generación y caracterización de Residuos sólidos";
             document.getElementsByClassName("popupContent")[0].appendChild(creatTitle2);
-
-            const creatImage = document.createElement("img");
-            creatImage.src = "images/barrerCalle.jpg";
-            document.getElementsByClassName("popupContent")[0].appendChild(creatImage);
-
             const creatImage2 = document.createElement("img");
             creatImage2.src = "images/tendencias-de-la-mercadotecnia.jpg";
+            creatImage2.id="img-right";
+            creatImage2.className="ajustarCentro";
             document.getElementsByClassName("popupContent")[0].appendChild(creatImage2);
+            
+            const creatImage = document.createElement("img");
+            creatImage.src = "images/barrerCalle.jpg";
+            creatImage.id="img-left";
+            document.getElementsByClassName("popupContent")[0].appendChild(creatImage);
 
             const texto = document.createElement("p");
             texto.textContent = "Delimitando un área (comunidad o cantón) o eligiendo una institución para estudio,"
@@ -129,7 +150,9 @@ function ssShowPopup() {
                 + "Es importante hacer énfasis en que se puede demostrar que existen diferencias significativas en la composición"
                 + "de residuos sólidos para los sectores comerciales y residenciales, principalmente en materiales orgánicos, papel,"
                 + "cartón y plástico.";
+                texto.style.clear = "both";
             document.getElementsByClassName("popupContent")[0].appendChild(texto);
+
 
         } else if (id === "card_GestionResiduoSolidos4") {/*Si se selecciona Gestion de Residuos solidos 
         Elaboración de planes de gestión de residuos sólidos Municipales.*/
