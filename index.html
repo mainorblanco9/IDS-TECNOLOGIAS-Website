@@ -1670,51 +1670,39 @@
     ================================================== -->
     <section id="contacto" class="s-contact target-section">
 
-        <div class="row s-contact__header">
+   <div class="row s-contact__header">
             <div class="column large-12">
                 <h3 class="section-header-allcaps">Contactenos</h3>
             </div>
         </div>
 
         <div class="row s-contact__content">
-
-            <div class="column large-7 medium-12">
-
-                <h4 class="huge-text">
-                    Comuníquese con nosotros y con gusto lo ayudamos a seleccionar el producto adecuado para su proceso
-                </h4>
-
+            <div class="col-12 position-relative">
+                <form method="POST" action="contacto.php">
+                    <div class="form-group ">
+                        <label for="nombre">Empresa</label>
+                        <input name="nombre" required type="text" id="nombre"
+                            class="form-control text-center" placeholder="Tu nombre">
+                    </div>
+                    <div class="form-group ">
+                        <label for="correo">Correo electrónico Cliente</label>
+                        <input name="correo" required type="email" id="correo"
+                            class="form-control text-center" placeholder="Tu correo electrónico">
+                    </div>
+                    <div class="form-group ">
+                        <label for="mensaje">Solicitud de servicio</label>
+                        <textarea required placeholder="Escribe tu mensaje"
+                            class="form-control text-center" name="mensaje" id="mensaje"
+                            cols="30" rows="5"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn-success btn align-center" type="submit">
+                            Enviar
+                        </button>
+                    </div>
+                </form>
             </div>
-
-            <div class="column large-4 medium-12">
-
-                <div class="row contact-infos">
-                    <div class="column large-12 medium-6 tab-12">
-                        <div class="contact-block">
-                            <h5 class="contact-block__header">
-                                Email
-                            </h5>
-                            <p class="contact-block__content">
-                                <a class="mailtoui" href="">idsytecnologias@gmail.com</a>
-                            </p>
-                        </div> <!-- end contact-block -->
-                    </div>
-                    <div class="column large-12 medium-6 tab-12">
-                        <div class="contact-block">
-                            <h5 class="contact-block__header">
-                                Telefono
-                            </h5>
-                            <p class="contact-block__content">
-                                <a href="tel:+50683089460">+506 83089460</a>
-                            </p>
-                        </div> <!-- end contact-block -->
-                    </div>
-
-                    <div class="column large-12">
-                        <a href="mailto:idsytecnologias@gmail.com" class="mailtoui btn btn--primary h-full-width">Contactenos</a>
-                    </div>
-                </div> <!-- end contact-infos -->
-
+        
             </div>
         </div> <!-- s-contact__content -->
 
@@ -1725,14 +1713,8 @@
     ================================================== -->
     <footer class="s-footer">
         <div class="row">
-            <div class="column large-4 medium-6 w-1000-stack s-footer__social-block">
-                <ul class="s-footer__social">
-                  
-                </ul>
-            </div>
-
-            <div class="column large-7 medium-6 w-1000-stack ss-copyright">
-                <span>IDS Y TECNOLOGIAS S.A</span> 
+            <div class="column large-9 medium-6 w-10000-stack ss-copyright text-center text-primary">
+                <span >IDS Y TECNOLOGIAS S.A</span> 
                
             </div>
         </div>

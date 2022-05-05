@@ -2952,16 +2952,17 @@ input[type="button"].btn--primary:focus {
 }
 
 .section-header-allcaps {
-    display: inline-block;
+    display: flex;
     font-size: var(--text-size);
     line-height: var(--vspace-1_25);
     text-transform: uppercase;
-    letter-spacing: .25em;
+    letter-spacing: .10em;
     padding-left: .25em;
     padding-bottom: .1em;
     margin-top: 0;
     margin-bottom: var(--vspace-1_5);
     position: relative;
+    text-align: center;
     
 }
 
@@ -4428,14 +4429,15 @@ input[type="button"].btn--primary:focus {
  *
  * ------------------------------------------------------------------- */
 .s-contact {
-    background-color: var(--color-gray-18);
-    padding-top: calc(6 * var(--space));
-    padding-bottom: var(--vspace-3_5);
+    background-color: white;
+    padding-top: calc(3 * var(--space));
+
 }
 
 .s-contact .section-header-allcaps {
-    color: white;
-    margin-bottom: var(--vspace-2_5);
+    color: Black;
+    text-align: relative;
+    item-align:center;
 }
 
 .s-contact .huge-text {
@@ -4458,13 +4460,13 @@ input[type="button"].btn--primary:focus {
 }
 
 .contact-block {
-    font-size: 2.8rem;
-    font-weight: 400;
+    font-size: 1.5rem;
+    font-weight: 300;
     line-height: 1.286;
 }
 
 .contact-block a {
-    color: white;
+    color: black;
 }
 
 .contact-block a:hover, .contact-block a:focus {
