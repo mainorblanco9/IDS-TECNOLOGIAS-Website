@@ -13,14 +13,14 @@ window.onload = function () {//Quita el popup al recargar la pagina y tambien el
     //la regresa al principio del sitio
     $('#popup').hide();
     location.hash = "#top";
-  }
+}
 
 /* ============ fin de ocultar ventana popup  =================*/
 
 /* ============ Oculta la ventana popup desde el boton x  =================*/
 let cerrarPopup = popup => {
     document.getElementById(popup).style.display = "none";
-  }
+}
 
 /* ============ Oculta la ventana popup desde el boton x  =================*/
 const cleanDiv = () => {
@@ -31,7 +31,7 @@ const cleanDiv = () => {
 }
 /* Para agregar la info a los popup */
 function ssShowPopup() {
-   
+
     /* Mostrar de nueva popup */
     $('#popup').show();
     /* ======================*/
@@ -54,8 +54,8 @@ function ssShowPopup() {
 
             const creatImage = document.createElement("img");
             creatImage.src = "images/RESIDUOSESPECIALES.jpg";
-            creatImage.alt="Residuos solidos";
-            creatImage.id="img-left";
+            creatImage.alt = "Residuos solidos";
+            creatImage.id = "img-left";
             creatImage.style.width = "200px";
             creatImage.style.height = "auto";
             document.getElementsByClassName("popupContent")[0].appendChild(creatImage);
@@ -70,8 +70,8 @@ function ssShowPopup() {
 
             const creatImage2 = document.createElement("img");
             creatImage2.src = "images/Biohazard-cleanup.jpg";
-            creatImage2.id="img-right";
-            creatImage2.className="ajustarCentro";
+            creatImage2.id = "img-right";
+            creatImage2.className = "ajustarCentro";
             creatImage2.style.width = "200px";
             creatImage2.style.height = "auto";
             document.getElementsByClassName("popupContent")[0].appendChild(creatImage2);
@@ -102,7 +102,7 @@ function ssShowPopup() {
 
             document.getElementsByClassName("popupContent")[0].appendChild(ul);
 
-            
+
         } else if (id === "card_GestionResiduoSolidos2") {/*Si se selecciona Gestion de Residuos solidos 
          Asesoría en la gestión de residuos peligrosos y especiales*/
 
@@ -135,13 +135,13 @@ function ssShowPopup() {
             document.getElementsByClassName("popupContent")[0].appendChild(creatTitle2);
             const creatImage2 = document.createElement("img");
             creatImage2.src = "images/tendencias-de-la-mercadotecnia.jpg";
-            creatImage2.id="img-right";
-            creatImage2.className="ajustarCentro";
+            creatImage2.id = "img-right";
+            creatImage2.className = "ajustarCentro";
             document.getElementsByClassName("popupContent")[0].appendChild(creatImage2);
-            
+
             const creatImage = document.createElement("img");
             creatImage.src = "images/barrerCalle.jpg";
-            creatImage.id="img-left";
+            creatImage.id = "img-left";
             document.getElementsByClassName("popupContent")[0].appendChild(creatImage);
 
             const texto = document.createElement("p");
@@ -150,7 +150,7 @@ function ssShowPopup() {
                 + "Es importante hacer énfasis en que se puede demostrar que existen diferencias significativas en la composición"
                 + "de residuos sólidos para los sectores comerciales y residenciales, principalmente en materiales orgánicos, papel,"
                 + "cartón y plástico.";
-                texto.style.clear = "both";
+            texto.style.clear = "both";
             document.getElementsByClassName("popupContent")[0].appendChild(texto);
 
 
@@ -176,10 +176,14 @@ function ssShowPopup() {
 
             const creatImage = document.createElement("img");
             creatImage.src = "images/clean.jpg";
+            creatImage.id = "img-left";
+            creatImage.className = "ajustarCentro";
             document.getElementsByClassName("popupContent")[0].appendChild(creatImage);
 
             const creatImage2 = document.createElement("img");
             creatImage2.src = "images/clean2.jpg";
+            creatImage2.id = "img-right";
+            creatImage2.className = "ajustarCentro";
             document.getElementsByClassName("popupContent")[0].appendChild(creatImage2);
 
         } else if (id === "card_EducacionAmbiental") {/*Educacion Ambiental / Tramitologia Ambiental*/
@@ -195,6 +199,8 @@ function ssShowPopup() {
 
             const creatImage = document.createElement("img");
             creatImage.src = "images/tramitologiaAmbiental.jpg";
+            creatImage.id = "img-left";
+            creatImage.className = "ajustarCentro";
             document.getElementsByClassName("popupContent")[0].appendChild(creatImage);
 
             const texto = document.createElement("p");
@@ -259,62 +265,64 @@ function ssShowPopup() {
 
         } else if (id === "Tramitologia ambiental") {/*Tramitologia Ambiental  / Ministerio de Salud*/
 
-        const creatTitle = document.createElement("h2");
-        creatTitle.textContent = "Tramitologia Ambiental";
-        const theFirstChild = document.getElementById("popupBody").firstChild;
-        document.getElementById("popupBody").insertBefore(creatTitle, theFirstChild);
+            const creatTitle = document.createElement("h2");
+            creatTitle.textContent = "Tramitologia Ambiental";
+            const theFirstChild = document.getElementById("popupBody").firstChild;
+            document.getElementById("popupBody").insertBefore(creatTitle, theFirstChild);
 
-        const creatTitle2 = document.createElement("h3");
-        creatTitle2.textContent = "Ministerio de Salud";
-        document.getElementsByClassName("popupContent")[0].appendChild(creatTitle2);
+            const creatTitle2 = document.createElement("h3");
+            creatTitle2.textContent = "Ministerio de Salud";
+            document.getElementsByClassName("popupContent")[0].appendChild(creatTitle2);
 
-        const creatImage = document.createElement("img");
-        creatImage.src = "images/Ministerio de Salud.jpg";
-        document.getElementsByClassName("popupContent")[0].appendChild(creatImage);
+            const creatImage = document.createElement("img");
+            creatImage.src = "images/Ministerio de Salud.jpg";
+            creatImage.id = "img-left";
+            creatImage.className = "ajustarCentro";
+            document.getElementsByClassName("popupContent")[0].appendChild(creatImage);
 
-        const texto = document.createElement("p");
-        texto.textContent = "Como ente regulador, apoyamos a nuestros clientes desde lo que establece "
-        +"la administración publica en la ejecución de tramites para diferentes proyectos,"
-        +"simplificando y agilizando el proceso , "
-        +"mejorando la eficacia reduciendo gastos operativos,"
-        +"gestionando los siguientes permisos o certificados:";
-        document.getElementsByClassName("popupContent")[0].appendChild(texto);
-        
-        let ul = document.createElement("ul");
-        let li1 = document.createElement("li");
-        let li1Texto = document.createTextNode("Reportes operacionales");
-        li1.appendChild(li1Texto);
+            const texto = document.createElement("p");
+            texto.textContent = "Como ente regulador, apoyamos a nuestros clientes desde lo que establece "
+                + "la administración publica en la ejecución de tramites para diferentes proyectos,"
+                + "simplificando y agilizando el proceso , "
+                + "mejorando la eficacia reduciendo gastos operativos,"
+                + "gestionando los siguientes permisos o certificados:";
+            document.getElementsByClassName("popupContent")[0].appendChild(texto);
 
-        let li2 = document.createElement("li");
-        let li2Texto = document.createTextNode("Permisos de descarga de aguas pluviales y residuales");
-        li2.appendChild(li2Texto);
+            let ul = document.createElement("ul");
+            let li1 = document.createElement("li");
+            let li1Texto = document.createTextNode("Reportes operacionales");
+            li1.appendChild(li1Texto);
 
-        let li3 = document.createElement("li");
-        let li3Texto = document.createTextNode("Permiso de Transporte, almacenamiento, y comercialización de combustible (dirección de hidrocarburos)");
-        li3.appendChild(li3Texto);
+            let li2 = document.createElement("li");
+            let li2Texto = document.createTextNode("Permisos de descarga de aguas pluviales y residuales");
+            li2.appendChild(li2Texto);
 
-        let li4 = document.createElement("li");
-        let li4Texto = document.createTextNode("Permisos de ubicación de plantas de tratamiento ");
-        li4.appendChild(li4Texto);
+            let li3 = document.createElement("li");
+            let li3Texto = document.createTextNode("Permiso de Transporte, almacenamiento, y comercialización de combustible (dirección de hidrocarburos)");
+            li3.appendChild(li3Texto);
 
-        let li5 = document.createElement("li");
-        let li5Texto = document.createTextNode("Auditorias de los sistemas de tratamiento de aguas residuales ");
-        li5.appendChild(li5Texto);
+            let li4 = document.createElement("li");
+            let li4Texto = document.createTextNode("Permisos de ubicación de plantas de tratamiento ");
+            li4.appendChild(li4Texto);
 
-        let li6 = document.createElement("li");
-        let li6Texto = document.createTextNode("Muestreo de aguas residuales y su respetivo analisis");
-        li6.appendChild(li6Texto);
+            let li5 = document.createElement("li");
+            let li5Texto = document.createTextNode("Auditorias de los sistemas de tratamiento de aguas residuales ");
+            li5.appendChild(li5Texto);
 
-        ul.appendChild(li1);
-        ul.appendChild(li2);
-        ul.appendChild(li3);
-        ul.appendChild(li4);
-        ul.appendChild(li5);
-        ul.appendChild(li6);
+            let li6 = document.createElement("li");
+            let li6Texto = document.createTextNode("Muestreo de aguas residuales y su respetivo analisis");
+            li6.appendChild(li6Texto);
 
-        document.getElementsByClassName("popupContent")[0].appendChild(ul);
+            ul.appendChild(li1);
+            ul.appendChild(li2);
+            ul.appendChild(li3);
+            ul.appendChild(li4);
+            ul.appendChild(li5);
+            ul.appendChild(li6);
 
-    } else if (id === "Tramitologia ambiental2") {/*Tramitologia Ambiental  / Secretaria Técnica Nacional (SETENA)*/
+            document.getElementsByClassName("popupContent")[0].appendChild(ul);
+
+        } else if (id === "Tramitologia ambiental2") {/*Tramitologia Ambiental  / Secretaria Técnica Nacional (SETENA)*/
 
             const creatTitle = document.createElement("h2");
             creatTitle.textContent = "Tramitologia Ambiental";
@@ -327,6 +335,8 @@ function ssShowPopup() {
 
             const creatImage = document.createElement("img");
             creatImage.src = "images/setena.jpg";
+            creatImage.id = "img-left";
+            creatImage.className = "ajustarCentro";
             document.getElementsByClassName("popupContent")[0].appendChild(creatImage);
 
             const texto = document.createElement("p");
@@ -407,6 +417,8 @@ function ssShowPopup() {
 
             const creatImage = document.createElement("img");
             creatImage.src = "images/Direccion de aguas.png";
+            creatImage.id = "img-left";
+            creatImage.className = "ajustarCentro";
             document.getElementsByClassName("popupContent")[0].appendChild(creatImage);
 
             const texto = document.createElement("p");
@@ -467,11 +479,11 @@ function ssShowPopup() {
             creatTitle2.textContent = `Carbono Neutralidad`;
             document.getElementsByClassName("popupContent")[0].appendChild(creatTitle2);
 
-            const creatImage = document.createElement("img");
-            creatImage.src = "images/carbononeutral.jpg";
-            document.getElementsByClassName("popupContent")[0].appendChild(creatImage);
             const creatImage2 = document.createElement("img");
             creatImage2.src = "images/Picture30.jpg";
+            creatImage2.id = "img-left";
+            creatImage2.style.height="300px";
+            creatImage2.className = "ajustarCentro";
             document.getElementsByClassName("popupContent")[0].appendChild(creatImage2);
 
             const texto = document.createElement("p");
@@ -479,6 +491,7 @@ function ssShowPopup() {
                 + "comercialización de productos. Es importante saber que  los gases de efecto invernadero (GEI), "
                 + "son todos aquellos que modifican los patrones de eliminación de radiación emitida desde la superficie "
                 + "de la tierra hacia el espacio los de mayor importancia son:";
+
             document.getElementsByClassName("popupContent")[0].appendChild(texto);
 
             let ul = document.createElement("ul");
@@ -515,10 +528,18 @@ function ssShowPopup() {
 
             document.getElementsByClassName("popupContent")[0].appendChild(ul);
 
+            const creatImage = document.createElement("img");
+            creatImage.src = "images/carbononeutral.jpg";
+            creatImage.id = "img-right";
+            creatImage.className = "ajustarCentro";
+            creatImage.style.marginTop = "1em";
+            document.getElementsByClassName("popupContent")[0].appendChild(creatImage);
+
             const texto2 = document.createElement("p");
             texto2.textContent = "Se requiere de la estimación precisa de la huella de carbono del producto, "
                 + "(proceso y actividad), así como de la realización de acciones internas o externas para disminuir "
                 + "esta huella haciendo cumplir la siguiente ecuación.";
+            texto2.style.marginTop = "1em";
             document.getElementsByClassName("popupContent")[0].appendChild(texto2);
 
             const creatP = document.createElement("p");
@@ -542,6 +563,8 @@ function ssShowPopup() {
 
             const creatImage = document.createElement("img");
             creatImage.src = "images/BANDERA AZUL.jpg";
+            creatImage.id = "img-left";
+            creatImage.className = "ajustarCentro";
             document.getElementsByClassName("popupContent")[0].appendChild(creatImage);
 
             const texto = document.createElement("p");
@@ -565,6 +588,8 @@ function ssShowPopup() {
 
             const creatImage = document.createElement("img");
             creatImage.src = "images/Pago por servicios ambientales.jpg";
+            creatImage.id = "img-left";
+            creatImage.className = "ajustarCentro";
             document.getElementsByClassName("popupContent")[0].appendChild(creatImage);
 
             const texto = document.createElement("p");
@@ -589,6 +614,8 @@ function ssShowPopup() {
 
             const creatImage = document.createElement("img");
             creatImage.src = "images/iso.jpg";
+            creatImage.id = "img-left";
+            creatImage.className = "ajustarCentro";
             document.getElementsByClassName("popupContent")[0].appendChild(creatImage);
 
             const texto = document.createElement("p");
@@ -637,6 +664,8 @@ function ssShowPopup() {
 
             const creatImage = document.createElement("img");
             creatImage.src = "images/eficiencia-energetica.jpg";
+            creatImage.id = "img-left";
+            creatImage.className = "ajustarCentro";
             document.getElementsByClassName("popupContent")[0].appendChild(creatImage);
 
             const texto = document.createElement("p");
@@ -662,6 +691,8 @@ function ssShowPopup() {
 
             const creatImage = document.createElement("img");
             creatImage.src = "images/eficiencia.jpg";
+            creatImage.id = "img-left";
+            creatImage.className = "ajustarCentro";
             document.getElementsByClassName("popupContent")[0].appendChild(creatImage);
 
             const texto = document.createElement("p");
@@ -723,15 +754,16 @@ function ssShowPopup() {
 
             const creatImage = document.createElement("img");
             creatImage.src = "images/tratamientoAguas1.png";
+            creatImage.id = "img-left";
+            creatImage.className = "ajustarCentro";
             document.getElementsByClassName("popupContent")[0].appendChild(creatImage);
 
             const creatImage2 = document.createElement("img");
             creatImage2.src = "images/tratamientoAguas.png";
+            creatImage2.id = "img-right";
+            creatImage2.className = "ajustarCentro";
             document.getElementsByClassName("popupContent")[0].appendChild(creatImage2);
 
-            const creatImage3 = document.createElement("img");
-            creatImage3.src = "images/Picture25.png";
-            document.getElementsByClassName("popupContent")[0].appendChild(creatImage3);
 
             let ul = document.createElement("ul");
             let li1 = document.createElement("li");
@@ -797,13 +829,20 @@ function ssShowPopup() {
 
             document.getElementsByClassName("popupContent")[0].appendChild(ul);
 
-        }else if (id === "Ventas de Productos ambientales2") {/*Ventas de Productos ambientales*/
+            const creatImage3 = document.createElement("img");
+            creatImage3.src = "images/Picture25.png";
+            creatImage3.id = "img-left";
+            creatImage3.style.marginTop="1.2em";
+            creatImage3.className = "ajustarCentro";
+            document.getElementsByClassName("popupContent")[0].appendChild(creatImage3);
 
-        const creatTitle = document.createElement("h2");
+        } else if (id === "Ventas de Productos ambientales2") {/*Ventas de Productos ambientales*/
+
+            const creatTitle = document.createElement("h2");
             creatTitle.textContent = "Ventas de Productos ambientales";
             const theFirstChild = document.getElementById("popupBody").firstChild;
             document.getElementById("popupBody").insertBefore(creatTitle, theFirstChild);
-            
+
             let ul = document.createElement("ul");
             let li1 = document.createElement("li");
             let li1Texto = document.createTextNode("Equipo de prevención y contención de derrames de sustancias peligrosas");
@@ -826,9 +865,9 @@ function ssShowPopup() {
             ul.appendChild(li2);
             ul.appendChild(li3);
             ul.appendChild(li4);
-
+            ul.style.marginTop ="2em";
             document.getElementsByClassName("popupContent")[0].appendChild(ul);
-    }
+        }
 
     });
 }
