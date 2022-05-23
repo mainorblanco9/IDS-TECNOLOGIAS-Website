@@ -61,6 +61,7 @@ try {
 
     //Destinatarios
     $mail->addAddress('mainorblanco96@gmail.com', 'Minor Blanco Chaves');     //Añadir un destinatario, el nombre es opcional
+    $mail->addBCC('michaeljuega@gmail.com');  
     //Nombre opcional
     $mail->isHTML(true);                         //Establecer el formato de correo electrónico en HTMl
     $mail->Subject = $_POST['nombre'] . ' - ' .' solicita servicio';             
