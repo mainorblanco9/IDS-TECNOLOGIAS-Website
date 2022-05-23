@@ -2044,6 +2044,7 @@ img,
 .video-container, 
 .ss-custom-select {
     margin-bottom: var(--vspace-1);
+    
 }
 
 
@@ -2224,7 +2225,9 @@ select {
 textarea {
     min-height: 25.6rem;
 }
-
+textarea.form-control {
+    font-size: calc(var(--text-size) * 0.7778);
+}
 input[type="email"]:focus, 
 input[type="number"]:focus, 
 input[type="search"]:focus, 

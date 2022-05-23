@@ -7,7 +7,7 @@ $(document).on('keydown', function (e) {
     if (e.keyCode === 27) {
         $('#popup').hide();
     }
-    moverseA("Servicios-ambiente");
+    //moverseA("Servicios-ambiente");
 });
 window.onload = function () {//Quita el popup al recargar la pagina y tambien el
     //la regresa al principio del sitio
