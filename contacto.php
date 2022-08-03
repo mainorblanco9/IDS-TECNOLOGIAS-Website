@@ -37,28 +37,23 @@ try {
     //$mail->addAttachment('files/comunicado.pdf', 'Comunicado');         //Agregar archivos adjuntos, nombre opcional
 
     //Nombre opcional
-    $mail->isHTML(true);                         //Establecer el formato de correo electrónico en HTMl
+    $mail->isHTML(true); //Establecer el formato de correo electrónico en HTMl
     $mail->Subject = 'Gracias por contactarnos';             
-    $mail->Body    = 'Hola,<br>
-
-    <p> Gracias por contactarnos! Nuestros representantes de soporte revisarán tu mensaje. Nos pondremos 
+    $mail->Body    = file_get_contents('correo.html');
+    $mail->AltBody = 'Hola, gracias por contactarnos!
+    Nuestros representantes de soporte revisarán tu mensaje. Nos pondremos 
     en contacto en un plazo de 48 horas.
-
-    Si tu problema no puede esperar, también puedes comunicarse con nosotros a través del chat en vivo en 
-    https://idsytecnologias.netlify.app/ o llamando al +506 8964 7060.<br>
-
-    Un saludo cordial,<br><br>
-
-    IDS Tecnologias</p>';
-    $mail->AltBody = 'Este es el cuerpo en texto sin formato para clientes de correo que no son HTML';
-      
+    Si tu problema no puede esperar, también puedes comunicarse con nosotros a través del chat en vivo en https://idsytecnologias.netlify.app/ o llamando al +506 8964 7060.
+    Un saludo cordial,IDS Tecnologias';
+      $mail->CharSet = 'UTF-8';
     $mail->send();    //Enviar correo eletrónico
       /*********Correo para IDS Tecnologias **************/
+      $mail->clearAllRecipients();
       //Emisor
     $mail->setFrom('michaeljuega@gmail.com', 'IDS Tecnologias');
 
     //Destinatarios
-    $mail->addAddress('betancourtmoran@gmail.com', 'Michael Betancourt Mora'); //Añadir un destinatario, el nombre es opcional
+    $mail->addAddress('mainorblanco96@gmail.com', 'Minor Blanco Chavez'); //Añadir un destinatario, el nombre es opcional
     $mail->addBCC('michaeljuega@gmail.com');  
     //Nombre opcional
     $mail->isHTML(true);                         //Establecer el formato de correo electrónico en HTMl
@@ -68,7 +63,7 @@ try {
     Correo de contacto: '. ' - ' .$_POST['correo']. ' - ' .'
     </p>';
     $mail->AltBody = 'Este es el cuerpo en texto sin formato para clientes de correo que no son HTML';
-
+    $mail->CharSet = 'UTF-8';
     $mail->send();  
     echo "<script>alert('Su solicitud a sido enviada');window.location.href='index.html';</script>";
 
