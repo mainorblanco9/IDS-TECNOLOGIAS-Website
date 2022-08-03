@@ -8,10 +8,8 @@ require 'vendor/autoload.php';
 /*require 'phpmailer/src/PHPMailer.php';
 require 'phpmailer/src/SMTP.php';
 require 'phpmailer/src/Exception.php';*/
-
 //Crear una instancia y pasar true para permitir las excepciones
 $mail = new PHPMailer(true);
-
 try {
     //Configuración del servidor
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;             //Habilitar los mensajes de depuración
@@ -19,9 +17,9 @@ try {
     $mail->Host       = 'smtp.gmail.com';            //Configurar el servidor SMTP
     $mail->SMTPAuth   = true;                          //Habilitar autenticación SMTP
     $mail->Username   = 'michaeljuega@gmail.com';            //Nombre de usuario SMTP
-    $mail->Password   = '.betamoran95';                      //Contraseña SMTP
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;   //Habilitar el cifrado TLS
-    $mail->Port       = 465;                           //Puerto TCP al que conectarse; use 587 si configuró `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+    $mail->Password   = 'wpzqetygvgwmoume';                      //Contraseña SMTP
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;   //Habilitar el cifrado TLS
+    $mail->Port       = 587;                           //Puerto TCP al que conectarse; use 587 si configuró `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Emisor
     $mail->setFrom('michaeljuega@gmail.com', 'IDS Tecnologias');
@@ -60,7 +58,7 @@ try {
     $mail->setFrom('michaeljuega@gmail.com', 'IDS Tecnologias');
 
     //Destinatarios
-    $mail->addAddress('mainorblanco96@gmail.com', 'Minor Blanco Chaves');     //Añadir un destinatario, el nombre es opcional
+    $mail->addAddress('betancourtmoran@gmail.com', 'Michael Betancourt Mora'); //Añadir un destinatario, el nombre es opcional
     $mail->addBCC('michaeljuega@gmail.com');  
     //Nombre opcional
     $mail->isHTML(true);                         //Establecer el formato de correo electrónico en HTMl
