@@ -1,0 +1,106 @@
+:root {
+    /* Paleta: Hidrógeno: Futuro Industrial Renovable */
+
+    /* Primario Principal (Hidrógeno y Tecnología) */
+    --color-hydrogen-blue: #00BFFF; /* DeepSkyBlue */
+    --color-hydrogen-cyan: #00FFFF; /* Aqua/Cyan */
+
+    /* Primario Secundario (Renovable y Sostenibilidad) */
+    --color-renewable-green: #2ECC71; /* Emerald */
+    --color-renewable-teal: #48C9B0;
+
+    /* Colores de Base (Industrial y Profesionalismo) */
+    --color-industrial-dark-gray: #4A4A4A;
+    --color-industrial-charcoal: #36454F;
+    --color-background-white: #FFFFFF;
+    --color-background-light-gray: #F4F6F6; /* Muy claro, casi blanco */
+
+    /* Texto */
+    --color-text-dark: var(--color-industrial-charcoal);
+    --color-text-medium: var(--color-industrial-dark-gray);
+    --color-text-light: #757575; /* Un gris más claro para texto secundario */
+    --color-text-on-dark-bg: var(--color-background-light-gray);
+
+    /* Acentos (Opcional) */
+    --color-accent-orange: #F39C12;
+
+    /* Fuentes */
+    --font-primary: 'Inter', sans-serif;
+    --font-headings: 'Montserrat', sans-serif;
+
+    /* Tamaños base y espaciado (simplificado para el inicio) */
+    --text-base-size: 10px; /* Para que 1rem = 10px, más fácil para calcular */
+    --space-unit: 1.6rem; /* 16px */
+}
+
+/* Reset básico y configuración global de fuentes */
+html {
+    font-size: var(--text-base-size); /* Establece la base para unidades rem */
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: 1.6rem; /* Default body text size (16px) */
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    background-color: var(--color-background-white);
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-headings);
+    color: var(--color-text-dark);
+    font-weight: 600; /* SemiBold por defecto para Montserrat */
+    margin-top: calc(var(--space-unit) * 1.5);
+    margin-bottom: var(--space-unit);
+}
+
+h1 { font-size: 3.2rem; }
+h2 { font-size: 2.8rem; }
+h3 { font-size: 2.4rem; }
+h4 { font-size: 2.0rem; }
+
+p {
+    margin-bottom: var(--space-unit);
+}
+
+a {
+    color: var(--color-hydrogen-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-renewable-teal);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Clases de utilidad (se pueden expandir) */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--space-unit);
+    padding-right: var(--space-unit);
+}
+
+/* Placeholder para estilos que estaban en base.css de Vite si se necesitan */
+/* Por ejemplo, normalizaciones o estilos muy básicos para elementos HTML */
+#app {
+  max-width: 100%; /* Asegurar que no haya overflow por defecto */
+  margin: 0 auto;
+  font-weight: normal;
+}

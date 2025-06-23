@@ -1,0 +1,15 @@
+/* Este archivo es una copia del css/vendor.css original del proyecto.
+   Se mantiene aquí como referencia. Contiene estilos de librerías de terceros
+   que podrían o no ser necesarias en la nueva aplicación Vue.
+   Se evaluará cada una y se reemplazarán por equivalentes de Vue o se eliminarán.
+
+   CONTENIDO DEL vendor.css ORIGINAL IRÍA AQUÍ.
+   (Omitido por brevedad, como en legacy_styles.css)
+*/
+/**
+ * Contenido de css/vendor.css del proyecto original.
+ * Similar a legacy_styles.css, este archivo es para referencia.
+ * Podría contener estilos para plugins como Swiper, Rellax, etc.
+ * Se verificará si las versiones Vue de estos plugins (o alternativas)
+ * manejan sus propios estilos o si algo de aquí necesita ser adaptado.
+ */

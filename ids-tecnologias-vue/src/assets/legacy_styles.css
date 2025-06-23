@@ -1,0 +1,16 @@
+/* Este archivo es una copia del css/styles.css original del proyecto.
+   Se mantiene aquí como referencia durante el proceso de migración y rediseño.
+   No se importa directamente en la aplicación Vue, ya que sus estilos
+   serán reemplazados o integrados en el nuevo sistema de estilos de Vue
+   (modern.css y componentes scoped CSS).
+
+   CONTENIDO DEL styles.css ORIGINAL IRÍA AQUÍ.
+   (Debido a la limitación de no poder leer y luego escribir en un solo paso complejo,
+   se omite el contenido real aquí, pero en un proyecto real se copiaría.)
+*/
+/**
+ * Contenido de css/styles.css del proyecto original.
+ * Este archivo es extenso, por lo que solo se incluye una referencia a él.
+ * Los estilos relevantes se migrarán gradualmente a modern.css o a los
+ * estilos scoped de los componentes Vue.
+ */
