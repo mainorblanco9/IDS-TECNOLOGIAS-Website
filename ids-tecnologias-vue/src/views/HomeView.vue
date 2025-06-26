@@ -2,8 +2,8 @@
   <main class="main-content">
     <!-- Hero Section -->
     <section id="inicio-vue" class="hero-section">
-      <div class="hero-background" style="background-image: url('/images/hero-hidrogeno-alta-calidad.jpg');">
-        <!-- Idealmente, esta imagen debería existir en public/images/ y ser de alta calidad -->
+      <div class="hero-background" :style="{ backgroundImage: `url(${heroBackgroundImage})` }">
+        <!-- Imagen de fondo ahora bindeada desde el script -->
       </div>
       <div class="hero-background-overlay"></div>
       <div class="hero-content">
@@ -27,19 +27,19 @@
         </p>
         <div class="services-grid">
           <div class="service-card">
-            <img src="/images/icon-hydrogen-energy.svg" alt="Icono Hidrógeno" class="service-icon"> <!-- Placeholder Icon -->
+            <img :src="iconHydrogenEnergy" alt="Icono Energía de Hidrógeno" class="service-icon">
             <h3>Energía de Hidrógeno</h3>
             <p>Pioneros en la implementación de tecnologías de hidrógeno verde para diversas aplicaciones industriales y energéticas.</p>
             <router-link to="/hidrogeno" class="btn btn--secondary">Ver Soluciones H2</router-link>
           </div>
           <div class="service-card">
-            <img src="/images/icon-industrial-solutions.svg" alt="Icono Industria" class="service-icon"> <!-- Placeholder Icon -->
+            <img :src="iconIndustrialSolutions" alt="Icono Soluciones Industriales" class="service-icon">
             <h3>Servicios Industriales</h3>
             <p>Optimización, automatización y mantenimiento para la industria moderna, asegurando eficiencia y seguridad.</p>
             <router-link to="/servicios-industriales" class="btn btn--secondary">Descubrir Más</router-link>
           </div>
           <div class="service-card">
-            <img src="/images/icon-environmental-care.svg" alt="Icono Ambiente" class="service-icon"> <!-- Placeholder Icon -->
+            <img :src="iconEnvironmentalCare" alt="Icono Cuidado Ambiental" class="service-icon">
             <h3>Gestión Ambiental</h3>
             <p>Consultoría y servicios para la gestión sostenible de recursos y cumplimiento normativo ambiental.</p>
             <router-link to="/servicios-ambientales" class="btn btn--secondary">Nuestros Servicios</router-link>
@@ -48,13 +48,26 @@
       </div>
     </section>
 
-    <!-- Aquí podrían ir más secciones: Sobre Nosotros (breve), Noticias, etc. -->
-
   </main>
 </template>
 
 <script setup>
-// No se requiere lógica de script específica para esta vista de inicio por ahora.
+// Importar las imágenes/SVGs directamente.
+// Vite las manejará. Estas rutas son relativas a la carpeta `public`
+// si comienzan con `/`, o relativas al archivo actual si usan `./` o `../`.
+// Para assets que Vite debe procesar y optimizar, es común ponerlos en `src/assets`
+// y usar rutas relativas como `../assets/images/icon-name.svg`.
+// Sin embargo, para simplificar y mantener la estructura que tenías,
+// asumimos que las imágenes están en `public/images/` y las referenciamos así.
+// Vite copiará el contenido de `public` a la raíz del build.
+
+// Si las imágenes están en public/images:
+import iconHydrogenEnergy from '/images/icon-hydrogen-energy.svg';
+import iconIndustrialSolutions from '/images/icon-industrial-solutions.svg';
+import iconEnvironmentalCare from '/images/icon-environmental-care.svg';
+import heroBackgroundImage from '/images/hero-hidrogeno-alta-calidad.jpg';
+// Asegúrate que 'hero-hidrogeno-alta-calidad.jpg' exista en public/images/
+
 </script>
 
 <style scoped>
@@ -84,8 +97,6 @@
   background-size: cover;
   background-position: center 60%; /* Ajustar posición para mejor encuadre */
   z-index: 1;
-  /* Transición suave si la imagen cambia dinámicamente */
-  /* transition: background-image 0.5s ease-in-out; */
 }
 .hero-background-overlay {
   content: '';
@@ -94,7 +105,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(0deg, rgba(0, 20, 40, 0.7) 0%, rgba(0, 50, 80, 0.4) 100%); /* Degradado más sutil */
+  background: linear-gradient(0deg, rgba(0, 20, 40, 0.7) 0%, rgba(0, 50, 80, 0.4) 100%);
   z-index: 2;
 }
 
@@ -102,7 +113,7 @@
   position: relative;
   z-index: 3;
   padding: var(--space-unit);
-  max-width: 900px; /* Limitar ancho del contenido del hero */
+  max-width: 900px;
 }
 
 .hero-content h1 {
@@ -120,15 +131,15 @@
   max-width: 750px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: calc(var(--space-unit) * 2); /* Más espacio antes del botón */
+  margin-bottom: calc(var(--space-unit) * 2);
   text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
-  font-weight: 300; /* Texto intro más ligero */
+  font-weight: 300;
 }
 
 .btn--primary-hydrogen {
   display: inline-block;
   background-color: var(--color-hydrogen-blue);
-  color: var(--color-industrial-charcoal); /* Texto oscuro para contraste con botón claro */
+  color: var(--color-industrial-charcoal);
   padding: calc(var(--space-unit)*0.6) calc(var(--space-unit)*1.4);
   font-family: var(--font-headings);
   font-weight: 600;
@@ -194,19 +205,10 @@
 }
 
 .service-icon {
-  width: 60px; /* Ajustar tamaño del icono */
+  width: 60px;
   height: 60px;
   margin-bottom: var(--space-unit);
-  /* Estilos para SVG o img. Si es SVG, puedes controlar el fill con CSS. */
-  /* background-color: var(--color-hydrogen-blue); */ /* Ejemplo si fuera un div */
-  /* -webkit-mask-size: cover; mask-size: cover; */
-  /* Si usas <img> asegúrate que las imágenes tengan el color deseado o sean SVG manipulables */
-  filter: grayscale(100%) opacity(0.7) contrast(0.5); /* Ejemplo de filtro para unificar iconos placeholder */
 }
-.service-card:hover .service-icon {
-   filter: none; /* Quitar filtro en hover */
-}
-
 
 .service-card h3 {
   font-size: 2.2rem;
@@ -219,7 +221,7 @@
   color: var(--color-text-medium);
   line-height: 1.65;
   margin-bottom: calc(var(--space-unit) * 1.2);
-  flex-grow: 1; /* Para que el botón quede abajo si las descripciones varían en altura */
+  flex-grow: 1;
 }
 .btn--secondary {
   display: inline-block;
@@ -235,11 +237,10 @@
   border: 2px solid var(--color-hydrogen-blue);
   transition: background-color 0.3s ease, color 0.3s ease;
   text-decoration: none;
-  margin-top: auto; /* Empujar botón al final de la card */
+  margin-top: auto;
 }
 .btn--secondary:hover {
   background-color: var(--color-hydrogen-blue);
   color: var(--color-background-white);
 }
-
 </style>
