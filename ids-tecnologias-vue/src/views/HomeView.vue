@@ -2,8 +2,8 @@
   <main class="main-content">
     <!-- Hero Section -->
     <section id="inicio-vue" class="hero-section">
+      <!-- heroBackgroundImage sigue viniendo de public/images/ -->
       <div class="hero-background" :style="{ backgroundImage: `url(${heroBackgroundImage})` }">
-        <!-- Imagen de fondo ahora bindeada desde el script -->
       </div>
       <div class="hero-background-overlay"></div>
       <div class="hero-content">
@@ -27,6 +27,7 @@
         </p>
         <div class="services-grid">
           <div class="service-card">
+            <!-- SVGs importados desde src/assets/images/ -->
             <img :src="iconHydrogenEnergy" alt="Icono Energía de Hidrógeno" class="service-icon">
             <h3>Energía de Hidrógeno</h3>
             <p>Pioneros en la implementación de tecnologías de hidrógeno verde para diversas aplicaciones industriales y energéticas.</p>
@@ -52,19 +53,16 @@
 </template>
 
 <script setup>
-// Importar las imágenes/SVGs directamente.
-// Vite las manejará. Estas rutas son relativas a la carpeta `public`
-// si comienzan con `/`, o relativas al archivo actual si usan `./` o `../`.
-// Para assets que Vite debe procesar y optimizar, es común ponerlos en `src/assets`
-// y usar rutas relativas como `../assets/images/icon-name.svg`.
-// Sin embargo, para simplificar y mantener la estructura que tenías,
-// asumimos que las imágenes están en `public/images/` y las referenciamos así.
-// Vite copiará el contenido de `public` a la raíz del build.
+// SVGs importados desde src/assets/images/
+// ¡ASEGÚRATE DE MOVER LOS ARCHIVOS SVG A ESTA UBICACIÓN EN TU PROYECTO LOCAL!
+// (ids-tecnologias-vue/src/assets/images/)
+import iconHydrogenEnergy from '../assets/images/icon-hydrogen-energy.svg';
+import iconIndustrialSolutions from '../assets/images/icon-industrial-solutions.svg';
+import iconEnvironmentalCare from '../assets/images/icon-environmental-care.svg';
 
-// Si las imágenes están en public/images:
-import iconHydrogenEnergy from '/images/icon-hydrogen-energy.svg';
-import iconIndustrialSolutions from '/images/icon-industrial-solutions.svg';
-import iconEnvironmentalCare from '/images/icon-environmental-care.svg';
+// La imagen de fondo JPG grande puede seguir sirviéndose desde public/images/
+// si se desea, o también moverla a src/assets/images y cambiar la importación.
+// Por ahora, la dejo como estaba para minimizar cambios en un solo paso.
 import heroBackgroundImage from '/images/hero-hidrogeno-alta-calidad.jpg';
 // Asegúrate que 'hero-hidrogeno-alta-calidad.jpg' exista en public/images/
 
@@ -78,7 +76,7 @@ import heroBackgroundImage from '/images/hero-hidrogeno-alta-calidad.jpg';
 /* Hero Section (revisión de estilos) */
 .hero-section {
   position: relative;
-  height: calc(95vh - 7rem); /* Un poco más alto */
+  height: calc(95vh - 7rem);
   min-height: 550px;
   display: flex;
   align-items: center;
@@ -95,7 +93,7 @@ import heroBackgroundImage from '/images/hero-hidrogeno-alta-calidad.jpg';
   width: 100%;
   height: 100%;
   background-size: cover;
-  background-position: center 60%; /* Ajustar posición para mejor encuadre */
+  background-position: center 60%;
   z-index: 1;
 }
 .hero-background-overlay {
